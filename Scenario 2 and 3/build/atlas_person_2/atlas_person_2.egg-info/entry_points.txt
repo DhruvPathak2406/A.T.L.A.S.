@@ -1,0 +1,4 @@
+[console_scripts]
+dynamic_obstacle = atlas_person_2.dynamic_obstacle:main
+mission_2_goal = atlas_person_2.mission_2_goal:main
+mission_3_goal = atlas_person_2.mission_3_goal:main

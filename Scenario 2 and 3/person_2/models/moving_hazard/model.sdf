@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="moving_hazard">
+    <link name="chassis">
+      <pose>0 0 0.48 0 0 0</pose>
+      <inertial>
+        <mass>18</mass>
+        <inertia>
+          <ixx>1.35</ixx><iyy>1.35</iyy><izz>1.2</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <collision name="body">
+        <geometry><box><size>0.78 0.62 0.92</size></box></geometry>
+      </collision>
+      <visual name="body_visual">
+        <geometry><box><size>0.78 0.62 0.92</size></box></geometry>
+        <material>
+          <ambient>0.55 0.12 0.08 1</ambient>
+          <diffuse>0.75 0.16 0.10 1</diffuse>
+          <emissive>0.08 0.01 0.01 1</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="left_wheel">
+      <pose>0 0.39 0.18 1.5708 0 0</pose>
+      <inertial>
+        <mass>1</mass>
+        <inertia><ixx>0.006</ixx><iyy>0.006</iyy><izz>0.006</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+      </inertial>
+      <collision name="wheel">
+        <geometry><cylinder><radius>0.18</radius><length>0.12</length></cylinder></geometry>
+        <surface><friction><ode><mu>1.4</mu><mu2>1.4</mu2></ode></friction></surface>
+      </collision>
+      <visual name="wheel_visual">
+        <geometry><cylinder><radius>0.18</radius><length>0.12</length></cylinder></geometry>
+        <material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material>
+      </visual>
+    </link>
+    <link name="right_wheel">
+      <pose>0 -0.39 0.18 1.5708 0 0</pose>
+      <inertial>
+        <mass>1</mass>
+        <inertia><ixx>0.006</ixx><iyy>0.006</iyy><izz>0.006</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+      </inertial>
+      <collision name="wheel">
+        <geometry><cylinder><radius>0.18</radius><length>0.12</length></cylinder></geometry>
+        <surface><friction><ode><mu>1.4</mu><mu2>1.4</mu2></ode></friction></surface>
+      </collision>
+      <visual name="wheel_visual">
+        <geometry><cylinder><radius>0.18</radius><length>0.12</length></cylinder></geometry>
+        <material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material>
+      </visual>
+    </link>
+
+    <joint name="left_wheel_joint" type="revolute">
+      <parent>chassis</parent><child>left_wheel</child>
+      <axis><xyz>0 1 0</xyz><limit><effort>20</effort><velocity>15</velocity></limit></axis>
+    </joint>
+    <joint name="right_wheel_joint" type="revolute">
+      <parent>chassis</parent><child>right_wheel</child>
+      <axis><xyz>0 1 0</xyz><limit><effort>20</effort><velocity>15</velocity></limit></axis>
+    </joint>
+
+    <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>0.78</wheel_separation>
+      <wheel_radius>0.18</wheel_radius>
+      <topic>/hazard/cmd_vel</topic>
+      <odom_topic>/hazard/odom</odom_topic>
+      <frame_id>hazard_odom</frame_id>
+      <child_frame_id>hazard_base</child_frame_id>
+      <max_linear_velocity>0.5</max_linear_velocity>
+      <min_linear_velocity>-0.5</min_linear_velocity>
+      <max_angular_velocity>1.2</max_angular_velocity>
+      <odom_publish_frequency>10</odom_publish_frequency>
+    </plugin>
+  </model>
+</sdf>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="counter_threat">
+    <gravity>0 0 -9.8</gravity>
+    <physics name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <light name="ceiling_light" type="directional">
+      <pose>0 0 11 0.3 0.2 0</pose>
+      <diffuse>0.8 0.78 0.72 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.3 0.2 -1</direction>
+    </light>
+
+    <model name="floor">
+      <static>true</static>
+      <link name="floor">
+        <pose>0 0 -0.08 0 0 0</pose>
+        <collision name="collision"><geometry><box><size>20 14 0.16</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>20 14 0.16</size></box></geometry>
+          <material><ambient>0.31 0.32 0.31 1</ambient><diffuse>0.42 0.43 0.41 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="north_outer_wall"><static>true</static><pose>0 7 1.5 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>20 0.3 3</size></box></geometry></collision><visual name="v"><geometry><box><size>20 0.3 3</size></box></geometry><material><diffuse>0.36 0.37 0.38 1</diffuse></material></visual></link></model>
+    <model name="south_outer_wall"><static>true</static><pose>0 -7 1.5 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>20 0.3 3</size></box></geometry></collision><visual name="v"><geometry><box><size>20 0.3 3</size></box></geometry><material><diffuse>0.36 0.37 0.38 1</diffuse></material></visual></link></model>
+    <model name="west_outer_wall"><static>true</static><pose>-10 0 1.5 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>0.3 14 3</size></box></geometry></collision><visual name="v"><geometry><box><size>0.3 14 3</size></box></geometry><material><diffuse>0.36 0.37 0.38 1</diffuse></material></visual></link></model>
+    <model name="east_outer_wall"><static>true</static><pose>10 0 1.5 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>0.3 14 3</size></box></geometry></collision><visual name="v"><geometry><box><size>0.3 14 3</size></box></geometry><material><diffuse>0.36 0.37 0.38 1</diffuse></material></visual></link></model>
+
+    <model name="west_partition_lower"><static>true</static><pose>-3 -4.25 1.25 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>0.25 2.5 2.5</size></box></geometry></collision><visual name="v"><geometry><box><size>0.25 2.5 2.5</size></box></geometry><material><diffuse>0.32 0.33 0.34 1</diffuse></material></visual></link></model>
+    <model name="west_partition_mid"><static>true</static><pose>-3 0 1.25 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>0.25 2.5 2.5</size></box></geometry></collision><visual name="v"><geometry><box><size>0.25 2.5 2.5</size></box></geometry><material><diffuse>0.32 0.33 0.34 1</diffuse></material></visual></link></model>
+    <model name="west_partition_upper"><static>true</static><pose>-3 4.25 1.25 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>0.25 2.5 2.5</size></box></geometry></collision><visual name="v"><geometry><box><size>0.25 2.5 2.5</size></box></geometry><material><diffuse>0.32 0.33 0.34 1</diffuse></material></visual></link></model>
+    <model name="east_partition_lower"><static>true</static><pose>3 -4.25 1.25 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>0.25 2.5 2.5</size></box></geometry></collision><visual name="v"><geometry><box><size>0.25 2.5 2.5</size></box></geometry><material><diffuse>0.32 0.33 0.34 1</diffuse></material></visual></link></model>
+    <model name="east_partition_mid"><static>true</static><pose>3 0 1.25 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>0.25 2.6 2.5</size></box></geometry></collision><visual name="v"><geometry><box><size>0.25 2.6 2.5</size></box></geometry><material><diffuse>0.32 0.33 0.34 1</diffuse></material></visual></link></model>
+    <model name="east_partition_upper"><static>true</static><pose>3 4.25 1.25 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>0.25 2.5 2.5</size></box></geometry></collision><visual name="v"><geometry><box><size>0.25 2.5 2.5</size></box></geometry><material><diffuse>0.32 0.33 0.34 1</diffuse></material></visual></link></model>
+
+    <model name="west_room_divider_a"><static>true</static><pose>-8.6 0 1.2 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>2.8 0.22 2.4</size></box></geometry></collision><visual name="v"><geometry><box><size>2.8 0.22 2.4</size></box></geometry><material><diffuse>0.3 0.31 0.32 1</diffuse></material></visual></link></model>
+    <model name="west_room_divider_b"><static>true</static><pose>-4.7 0 1.2 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>3.0 0.22 2.4</size></box></geometry></collision><visual name="v"><geometry><box><size>3.0 0.22 2.4</size></box></geometry><material><diffuse>0.3 0.31 0.32 1</diffuse></material></visual></link></model>
+    <model name="extraction_room_partition_left"><static>true</static><pose>4.35 2.2 1.2 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>4.7 0.22 2.4</size></box></geometry></collision><visual name="v"><geometry><box><size>4.7 0.22 2.4</size></box></geometry><material><diffuse>0.3 0.31 0.32 1</diffuse></material></visual></link></model>
+    <model name="extraction_room_partition_right"><static>true</static><pose>9.35 2.2 1.2 0 0 0</pose><link name="wall"><collision name="c"><geometry><box><size>1.7 0.22 2.4</size></box></geometry></collision><visual name="v"><geometry><box><size>1.7 0.22 2.4</size></box></geometry><material><diffuse>0.3 0.31 0.32 1</diffuse></material></visual></link></model>
+
+    <include><uri>model://concrete_barrier</uri><name>deployment_corridor_barrier</name><pose>-5.3 -4.7 0.575 0 0 -0.3</pose></include>
+    <include><uri>model://concrete_barrier</uri><name>damaged_doorway_barrier</name><pose>4.5 -4.8 0.575 0 0 0.15</pose></include>
+    <include><uri>model://rubble_pile</uri><name>west_rubble</name><pose>-1.2 4.8 0 0.04 0.08 0.4</pose></include>
+    <include><uri>model://rubble_pile</uri><name>east_rubble</name><pose>5.0 -4.6 0 0 0.03 -0.15</pose></include>
+    <include><uri>model://concrete_barrier</uri><name>extraction_approach_barricade</name><pose>8.8 2.4 0.575 0 0 1.5708</pose></include>
+
+    <model name="deployment_zone_marker">
+      <static>true</static><pose>-8 -5 0.006 0 0 0</pose>
+      <link name="marker"><visual name="visual"><geometry><box><size>1.4 1.4 0.01</size></box></geometry><material><ambient>0.1 0.25 0.1 1</ambient><diffuse>0.1 0.65 0.2 1</diffuse></material></visual></link>
+    </model>
+    <model name="safe_extraction_zone_marker">
+      <static>true</static><pose>8 5 0.006 0 0 0</pose>
+      <link name="marker"><visual name="visual"><geometry><box><size>1.8 1.8 0.01</size></box></geometry><material><ambient>0.1 0.25 0.1 1</ambient><diffuse>0.1 0.8 0.25 1</diffuse></material></visual></link>
+    </model>
+
+    <include><uri>model://moving_hazard</uri><name>moving_hazard</name><pose>-0.2 -1.7 0 0 0 0</pose></include>
+  </world>
+</sdf>

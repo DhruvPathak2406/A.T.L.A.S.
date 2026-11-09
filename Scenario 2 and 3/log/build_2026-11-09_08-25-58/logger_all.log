@@ -1,0 +1,87 @@
+[0.301s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--base-paths', 'person_2', '--packages-select', 'atlas_person_2']
+[0.301s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=22, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['person_2'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['atlas_person_2'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x71c1d913bc80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71c1d92c0980>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71c1d92c0980>>)
+[0.359s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.359s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.359s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.359s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.359s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.359s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dhruv/A.T.L.A.S_EOD/person_2'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extensions ['ignore', 'ignore_ament_install']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extension 'ignore'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extension 'ignore_ament_install'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extensions ['colcon_pkg']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extension 'colcon_pkg'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extensions ['colcon_meta']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extension 'colcon_meta'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extensions ['ros']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(person_2) by extension 'ros'
+[0.392s] DEBUG:colcon.colcon_core.package_identification:Package 'person_2' with type 'ros.ament_python' and name 'atlas_person_2'
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.419s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 390 installed packages in /opt/ros/jazzy
+[0.420s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.463s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'cmake_args' from command line to 'None'
+[0.465s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'cmake_target' from command line to 'None'
+[0.466s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.466s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.466s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'cmake_clean_first' from command line to 'False'
+[0.466s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'cmake_force_configure' from command line to 'False'
+[0.466s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'ament_cmake_args' from command line to 'None'
+[0.466s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.466s] Level 5:colcon.colcon_core.verb:set package 'atlas_person_2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.466s] DEBUG:colcon.colcon_core.verb:Building package 'atlas_person_2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2', 'merge_install': False, 'path': '/home/dhruv/A.T.L.A.S_EOD/person_2', 'symlink_install': False, 'test_result_base': None}
+[0.466s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.467s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/dhruv/A.T.L.A.S_EOD/person_2' with build type 'ament_python'
+[0.468s] Level 1:colcon.colcon_core.shell:create_environment_hook('atlas_person_2', 'ament_prefix_path')
+[0.578s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/hook/ament_prefix_path.ps1'
+[0.580s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/hook/ament_prefix_path.dsv'
+[0.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/hook/ament_prefix_path.sh'
+[0.585s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.585s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.768s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/dhruv/A.T.L.A.S_EOD/person_2'
+[0.768s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.768s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.635s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install_scripts, build, upload, bdist, update_catalog, egg_info, register, compile_catalog, extract_messages, bdist_dumb, build_py, rotate, install_data, symlink_data, install, build_scripts, test, setopt, init_catalog, upload_docs, install_headers, develop, build_clib, install_lib, clean, bdist_egg, alias, saveopts, install_egg_info, editable_wheel, easy_install, sdist, dist_info, check, bdist_rpm, build_ext
+[1.638s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/A.T.L.A.S_EOD/person_2': PYTHONPATH=/home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/atlas_person_2 build --build-base /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build install --record /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/install.log --install-scripts $base/lib/atlas_person_2 --single-version-externally-managed install_data
+[2.071s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/A.T.L.A.S_EOD/person_2' returned '0': PYTHONPATH=/home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/atlas_person_2 build --build-base /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build install --record /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/install.log --install-scripts $base/lib/atlas_person_2 --single-version-externally-managed install_data
+[2.087s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2' for CMake module files
+[2.088s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2' for CMake config files
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib'
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/bin'
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/pkgconfig/atlas_person_2.pc'
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages'
+[2.090s] Level 1:colcon.colcon_core.shell:create_environment_hook('atlas_person_2', 'pythonpath')
+[2.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/hook/pythonpath.ps1'
+[2.090s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/hook/pythonpath.dsv'
+[2.091s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/hook/pythonpath.sh'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/bin'
+[2.091s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(atlas_person_2)
+[2.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/package.ps1'
+[2.093s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/package.dsv'
+[2.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/package.sh'
+[2.095s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/package.bash'
+[2.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/package.zsh'
+[2.097s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/colcon-core/packages/atlas_person_2)
+[2.098s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.098s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.098s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.098s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.199s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[2.199s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.199s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.199s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.204s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[2.204s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.204s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhruv/A.T.L.A.S_EOD/install/local_setup.ps1'
+[2.206s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dhruv/A.T.L.A.S_EOD/install/_local_setup_util_ps1.py'
+[2.207s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhruv/A.T.L.A.S_EOD/install/setup.ps1'
+[2.208s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhruv/A.T.L.A.S_EOD/install/local_setup.sh'
+[2.208s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dhruv/A.T.L.A.S_EOD/install/_local_setup_util_sh.py'
+[2.209s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhruv/A.T.L.A.S_EOD/install/setup.sh'
+[2.210s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhruv/A.T.L.A.S_EOD/install/local_setup.bash'
+[2.211s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhruv/A.T.L.A.S_EOD/install/setup.bash'
+[2.211s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhruv/A.T.L.A.S_EOD/install/local_setup.zsh'
+[2.213s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhruv/A.T.L.A.S_EOD/install/setup.zsh'

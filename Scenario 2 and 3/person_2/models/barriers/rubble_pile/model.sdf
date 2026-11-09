@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="rubble_pile">
+    <static>true</static>
+    <link name="rubble">
+      <collision name="large_chunk">
+        <pose>-0.24 0 0.20 0.06 0.08 0.15</pose>
+        <geometry><box><size>0.75 0.58 0.38</size></box></geometry>
+      </collision>
+      <collision name="small_chunk">
+        <pose>0.28 0.08 0.13 -0.08 0.04 -0.25</pose>
+        <geometry><box><size>0.42 0.38 0.25</size></box></geometry>
+      </collision>
+      <visual name="large_chunk_visual">
+        <pose>-0.24 0 0.20 0.06 0.08 0.15</pose>
+        <geometry><box><size>0.75 0.58 0.38</size></box></geometry>
+        <material><ambient>0.34 0.33 0.30 1</ambient><diffuse>0.42 0.41 0.37 1</diffuse></material>
+      </visual>
+      <visual name="small_chunk_visual">
+        <pose>0.28 0.08 0.13 -0.08 0.04 -0.25</pose>
+        <geometry><box><size>0.42 0.38 0.25</size></box></geometry>
+        <material><ambient>0.30 0.30 0.28 1</ambient><diffuse>0.39 0.39 0.36 1</diffuse></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

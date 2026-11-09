@@ -1,0 +1,53 @@
+bt_navigator:
+  ros__parameters:
+    global_frame: map
+    robot_base_frame: base_footprint
+    odom_topic: /odom
+    bt_loop_duration: 10
+    default_server_timeout: 20
+    wait_for_service_timeout: 1000
+
+planner_server:
+  ros__parameters:
+    expected_planner_frequency: 5.0
+    planner_plugins: ["GridBased"]
+    GridBased:
+      plugin: "nav2_navfn_planner::NavfnPlanner"
+      tolerance: 0.45
+      use_astar: true
+      allow_unknown: true
+
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      update_frequency: 3.0
+      publish_frequency: 1.0
+      global_frame: odom
+      robot_base_frame: base_footprint
+      robot_radius: 0.22
+      resolution: 0.10
+      rolling_window: true
+      width: 40
+      height: 28
+      track_unknown_space: false
+      transform_tolerance: 0.3
+      plugins: ["obstacle_layer", "inflation_layer"]
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: true
+        observation_sources: scan
+        scan:
+          topic: /scan
+          data_type: "LaserScan"
+          marking: true
+          clearing: true
+          obstacle_min_range: 0.10
+          obstacle_max_range: 5.0
+          raytrace_min_range: 0.10
+          raytrace_max_range: 6.0
+          max_obstacle_height: 1.8
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        cost_scaling_factor: 3.0
+        inflation_radius: 0.50
+      always_send_full_costmap: true

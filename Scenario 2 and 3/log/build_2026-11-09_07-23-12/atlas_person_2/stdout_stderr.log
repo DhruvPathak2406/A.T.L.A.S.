@@ -1,0 +1,72 @@
+running egg_info
+creating ../build/atlas_person_2/atlas_person_2.egg-info
+writing ../build/atlas_person_2/atlas_person_2.egg-info/PKG-INFO
+writing dependency_links to ../build/atlas_person_2/atlas_person_2.egg-info/dependency_links.txt
+writing entry points to ../build/atlas_person_2/atlas_person_2.egg-info/entry_points.txt
+writing requirements to ../build/atlas_person_2/atlas_person_2.egg-info/requires.txt
+writing top-level names to ../build/atlas_person_2/atlas_person_2.egg-info/top_level.txt
+writing manifest file '../build/atlas_person_2/atlas_person_2.egg-info/SOURCES.txt'
+reading manifest file '../build/atlas_person_2/atlas_person_2.egg-info/SOURCES.txt'
+writing manifest file '../build/atlas_person_2/atlas_person_2.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build
+creating /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib
+creating /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2
+copying atlas_person_2/__init__.py -> /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2
+copying atlas_person_2/dynamic_obstacle.py -> /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2
+copying atlas_person_2/launch_utils.py -> /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2
+copying atlas_person_2/mission_2_goal.py -> /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2
+copying atlas_person_2/goal_common.py -> /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2
+copying atlas_person_2/mission_3_goal.py -> /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2
+running install
+running install_lib
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2
+copying /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2/__init__.py -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2
+copying /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2/dynamic_obstacle.py -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2
+copying /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2/launch_utils.py -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2
+copying /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2/mission_2_goal.py -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2
+copying /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2/goal_common.py -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2
+copying /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build/lib/atlas_person_2/mission_3_goal.py -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2
+byte-compiling /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2/dynamic_obstacle.py to dynamic_obstacle.cpython-312.pyc
+byte-compiling /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2/launch_utils.py to launch_utils.cpython-312.pyc
+byte-compiling /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2/mission_2_goal.py to mission_2_goal.cpython-312.pyc
+byte-compiling /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2/goal_common.py to goal_common.cpython-312.pyc
+byte-compiling /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2/mission_3_goal.py to mission_3_goal.cpython-312.pyc
+running install_data
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/ament_index
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/ament_index/resource_index
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/ament_index/resource_index/packages
+copying resource/atlas_person_2 -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/ament_index/resource_index/packages
+copying package.xml -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2
+copying README.md -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/config
+copying config/gazebo_bridge.yaml -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/config
+copying config/local_costmap.yaml -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/config
+copying config/nav2_params.yaml -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/config
+copying config/controller.yaml -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/config
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/launch
+copying launch/mission_3.launch.py -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/launch
+copying launch/mission_2.launch.py -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/launch
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/moving_hazard
+copying models/moving_hazard/model.config -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/moving_hazard
+copying models/moving_hazard/model.sdf -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/moving_hazard
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/barriers
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/barriers/concrete_barrier
+copying models/barriers/concrete_barrier/model.config -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/barriers/concrete_barrier
+copying models/barriers/concrete_barrier/model.sdf -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/barriers/concrete_barrier
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/barriers/rubble_pile
+copying models/barriers/rubble_pile/model.config -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/barriers/rubble_pile
+copying models/barriers/rubble_pile/model.sdf -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/models/barriers/rubble_pile
+creating /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/worlds
+copying worlds/hostile_corridor.sdf -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/worlds
+copying worlds/counter_threat.sdf -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/worlds
+running install_egg_info
+Copying ../build/atlas_person_2/atlas_person_2.egg-info to /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2-0.1.0-py3.12.egg-info
+running install_scripts
+Installing dynamic_obstacle script to /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/atlas_person_2
+Installing mission_2_goal script to /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/atlas_person_2
+Installing mission_3_goal script to /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/atlas_person_2
+writing list of installed files to '/home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/install.log'

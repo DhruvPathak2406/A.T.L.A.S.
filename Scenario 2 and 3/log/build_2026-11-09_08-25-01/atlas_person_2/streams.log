@@ -1,0 +1,25 @@
+[0.997s] Invoking command in '/home/dhruv/A.T.L.A.S_EOD/person_2': PYTHONPATH=/home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/atlas_person_2 build --build-base /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build install --record /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/install.log --install-scripts $base/lib/atlas_person_2 --single-version-externally-managed install_data
+[1.188s] running egg_info
+[1.199s] writing ../build/atlas_person_2/atlas_person_2.egg-info/PKG-INFO
+[1.199s] writing dependency_links to ../build/atlas_person_2/atlas_person_2.egg-info/dependency_links.txt
+[1.201s] writing entry points to ../build/atlas_person_2/atlas_person_2.egg-info/entry_points.txt
+[1.201s] writing requirements to ../build/atlas_person_2/atlas_person_2.egg-info/requires.txt
+[1.201s] writing top-level names to ../build/atlas_person_2/atlas_person_2.egg-info/top_level.txt
+[1.224s] reading manifest file '../build/atlas_person_2/atlas_person_2.egg-info/SOURCES.txt'
+[1.247s] writing manifest file '../build/atlas_person_2/atlas_person_2.egg-info/SOURCES.txt'
+[1.248s] running build
+[1.248s] running build_py
+[1.249s] running install
+[1.253s] running install_lib
+[1.267s] running install_data
+[1.268s] copying README.md -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2
+[1.268s] copying config/controller.yaml -> /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/share/atlas_person_2/config
+[1.268s] running install_egg_info
+[1.284s] removing '/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2-0.1.0-py3.12.egg-info' (and everything under it)
+[1.284s] Copying ../build/atlas_person_2/atlas_person_2.egg-info to /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages/atlas_person_2-0.1.0-py3.12.egg-info
+[1.287s] running install_scripts
+[1.380s] Installing dynamic_obstacle script to /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/atlas_person_2
+[1.380s] Installing mission_2_goal script to /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/atlas_person_2
+[1.380s] Installing mission_3_goal script to /home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/atlas_person_2
+[1.380s] writing list of installed files to '/home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/install.log'
+[1.403s] Invoked command in '/home/dhruv/A.T.L.A.S_EOD/person_2' returned '0': PYTHONPATH=/home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/A.T.L.A.S_EOD/install/atlas_person_2/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/atlas_person_2 build --build-base /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/build install --record /home/dhruv/A.T.L.A.S_EOD/build/atlas_person_2/install.log --install-scripts $base/lib/atlas_person_2 --single-version-externally-managed install_data
