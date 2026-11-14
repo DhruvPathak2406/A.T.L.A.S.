@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="rubble_run">
+    <gravity>0 0 -9.8</gravity>
+    <physics name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <!-- Gazebo Harmonic required system plugins -->
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- Directional Sun lighting -->
+    <light name="sun" type="directional">
+      <pose>0 0 12 0.4 0.3 0</pose>
+      <diffuse>0.85 0.83 0.78 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.3 0.2 -1</direction>
+    </light>
+
+    <!-- Concrete arena ground floor -->
+    <model name="floor">
+      <static>true</static>
+      <link name="floor_link">
+        <pose>0 0 -0.08 0 0 0</pose>
+        <collision name="collision">
+          <geometry><box><size>18.5 12.5 0.16</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>18.5 12.5 0.16</size></box></geometry>
+          <material>
+            <ambient>0.33 0.32 0.30 1</ambient>
+            <diffuse>0.42 0.41 0.39 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Perimeter boundary walls -->
+    <model name="north_wall">
+      <static>true</static>
+      <pose>0 6.0 1.5 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="c"><geometry><box><size>18.0 0.3 3.0</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>18.0 0.3 3.0</size></box></geometry><material><diffuse>0.36 0.37 0.38 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <model name="south_wall">
+      <static>true</static>
+      <pose>0 -6.0 1.5 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="c"><geometry><box><size>18.0 0.3 3.0</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>18.0 0.3 3.0</size></box></geometry><material><diffuse>0.36 0.37 0.38 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <model name="west_wall">
+      <static>true</static>
+      <pose>-9.0 0 1.5 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="c"><geometry><box><size>0.3 12.0 3.0</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.3 12.0 3.0</size></box></geometry><material><diffuse>0.36 0.37 0.38 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <model name="east_wall">
+      <static>true</static>
+      <pose>9.0 0 1.5 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="c"><geometry><box><size>0.3 12.0 3.0</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.3 12.0 3.0</size></box></geometry><material><diffuse>0.36 0.37 0.38 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- Structural interior dividing partitions -->
+    <model name="west_partition_upper">
+      <static>true</static>
+      <pose>-3.0 3.75 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="c"><geometry><box><size>0.25 4.5 2.5</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.25 4.5 2.5</size></box></geometry><material><diffuse>0.30 0.32 0.34 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <model name="west_partition_lower">
+      <static>true</static>
+      <pose>-3.0 -3.75 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="c"><geometry><box><size>0.25 4.5 2.5</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.25 4.5 2.5</size></box></geometry><material><diffuse>0.30 0.32 0.34 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <model name="east_partition_mid_lower">
+      <static>true</static>
+      <pose>3.5 -1.0 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="c"><geometry><box><size>0.25 5.0 2.5</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.25 5.0 2.5</size></box></geometry><material><diffuse>0.30 0.32 0.34 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <model name="east_partition_upper">
+      <static>true</static>
+      <pose>3.5 4.5 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="c"><geometry><box><size>0.25 3.0 2.5</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.25 3.0 2.5</size></box></geometry><material><diffuse>0.30 0.32 0.34 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- Rubble blocks and debris forming the obstacle course -->
+    <!-- Direct path blocker at west choke point -->
+    <include>
+      <uri>model://rubble</uri>
+      <name>rubble_west_choke</name>
+      <pose>-3.0 -0.1 0 0 0 0.25</pose>
+    </include>
+    <include>
+      <uri>model://debris</uri>
+      <name>debris_west_flank</name>
+      <pose>-3.0 -1.0 0 0 0 -0.4</pose>
+    </include>
+
+    <!-- Central obstacle field blocking straight trajectory -->
+    <include>
+      <uri>model://rubble</uri>
+      <name>rubble_center_main</name>
+      <pose>0.2 0.2 0 0 0 0.6</pose>
+    </include>
+    <include>
+      <uri>model://rubble</uri>
+      <name>rubble_center_north</name>
+      <pose>-0.2 1.9 0 0 0 -0.3</pose>
+    </include>
+    <include>
+      <uri>model://rubble</uri>
+      <name>rubble_center_south</name>
+      <pose>-0.5 -2.2 0 0 0 0.15</pose>
+    </include>
+    <include>
+      <uri>model://debris</uri>
+      <name>debris_center_entry</name>
+      <pose>-1.4 0.6 0 0 0 0.5</pose>
+    </include>
+    <include>
+      <uri>model://debris</uri>
+      <name>debris_center_exit</name>
+      <pose>1.5 -0.4 0 0 0 -0.7</pose>
+    </include>
+    <include>
+      <uri>model://debris</uri>
+      <name>debris_south_pass</name>
+      <pose>0.8 -3.4 0 0 0 0.3</pose>
+    </include>
+
+    <!-- Rubble constriction around east opening into goal area -->
+    <include>
+      <uri>model://rubble</uri>
+      <name>rubble_east_constriction</name>
+      <pose>3.5 1.7 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://debris</uri>
+      <name>debris_goal_approach</name>
+      <pose>5.2 1.4 0 0 0 0.4</pose>
+    </include>
+    <include>
+      <uri>model://rubble</uri>
+      <name>rubble_northeast_flank</name>
+      <pose>5.0 4.8 0 0 0 -0.2</pose>
+    </include>
+
+  </world>
+</sdf>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="debris">
+    <static>true</static>
+    <link name="debris_link">
+      <collision name="debris_chunk1">
+        <pose>-0.2 0.1 0.18 0.1 -0.05 0.4</pose>
+        <geometry>
+          <box>
+            <size>0.6 0.45 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="debris_chunk2">
+        <pose>0.25 -0.15 0.14 -0.05 0.12 -0.2</pose>
+        <geometry>
+          <box>
+            <size>0.5 0.4 0.28</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="debris_pipe">
+        <pose>0.05 0.2 0.1 1.5708 0.3 0.8</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08</radius>
+            <length>0.7</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="debris_chunk1_vis">
+        <pose>-0.2 0.1 0.18 0.1 -0.05 0.4</pose>
+        <geometry>
+          <box>
+            <size>0.6 0.45 0.36</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.35 0.33 0.30 1</ambient>
+          <diffuse>0.48 0.46 0.42 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      <visual name="debris_chunk2_vis">
+        <pose>0.25 -0.15 0.14 -0.05 0.12 -0.2</pose>
+        <geometry>
+          <box>
+            <size>0.5 0.4 0.28</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.30 0.29 0.27 1</ambient>
+          <diffuse>0.40 0.38 0.35 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      <visual name="debris_pipe_vis">
+        <pose>0.05 0.2 0.1 1.5708 0.3 0.8</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08</radius>
+            <length>0.7</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.25 0.22 0.20 1</ambient>
+          <diffuse>0.50 0.35 0.25 1</diffuse>
+          <specular>0.2 0.2 0.2 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
